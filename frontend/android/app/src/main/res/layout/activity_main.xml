@@ -1,60 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/wave_background"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:paddingLeft="28dp"
-    android:paddingTop="44dp"
-    android:paddingRight="28dp"
-    android:paddingBottom="44dp">
+    android:layout_height="match_parent">
 
-    <Space
+    <WebView
+        android:id="@+id/main_webview"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="match_parent"
+        android:visibility="gone" />
 
-    <ImageView
-        android:id="@+id/main_image"
-        android:layout_width="220dp"
-        android:layout_height="220dp"
-        android:contentDescription="@string/app_name"
-        android:scaleType="fitCenter"
-        android:src="@drawable/wave_logo" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="@string/app_name"
-        android:textColor="#FFFFFF"
-        android:textSize="34sp"
-        android:textStyle="bold" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text="@string/wave_tagline"
-        android:textAllCaps="true"
-        android:textColor="#A9B2C7"
-        android:textSize="12sp"
-        android:letterSpacing="0.22" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:maxWidth="280dp"
-        android:text="@string/wave_caption"
-        android:textColor="#D7DDEA"
-        android:textSize="14sp" />
-
-    <Space
+    <LinearLayout
+        android:id="@+id/splash_container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="match_parent"
+        android:background="@drawable/wave_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="28dp"
+        android:paddingTop="44dp"
+        android:paddingRight="28dp"
+        android:paddingBottom="44dp">
 
-</LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/main_image"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/wave_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/wave_tagline"
+            android:textAllCaps="true"
+            android:textColor="#A9B2C7"
+            android:textSize="12sp"
+            android:letterSpacing="0.22" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:maxWidth="280dp"
+            android:text="@string/wave_caption"
+            android:textColor="#D7DDEA"
+            android:textSize="14sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</FrameLayout>
