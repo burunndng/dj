@@ -3,4 +3,5 @@
   <color name="iconBackground">#05070B</color>
   <color name="colorPrimary">#E8EDF8</color>
   <color name="colorPrimaryDark">#05070B</color>
+  <color name="wave_nav_inactive">#97A4BF</color>
 </resources>

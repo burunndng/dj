@@ -1,5 +1,11 @@
 <resources>
   <string name="app_name">Wave</string>
-  <string name="wave_tagline">Darkroom sound culture</string>
-  <string name="wave_caption">A sleek music-first Android build with your custom DJ mark.</string>
+  <string name="wave_tagline">Offline DJ practice booth</string>
+  <string name="wave_caption">Build quick transitions, shape energy, and keep your set ready anywhere.</string>
+  <string name="wave_empty_setlist">Add your first track in Setlist to build tonight’s run.</string>
+  <string name="wave_setlist_hint">Your setlist is empty. Add tracks above and tap remove on any row to clean it up.</string>
+  <string name="wave_notes_saved">Notes saved locally on this device.</string>
+  <string name="wave_notes_unsaved">Unsaved changes</string>
+  <string name="wave_no_pad_yet">No pad triggered yet</string>
+  <string name="wave_remove">Remove</string>
 </resources>
