@@ -4,35 +4,37 @@
 I need this as an android apk. If there's no requirement for backend, then as normal android apk, not expo. U can use my expo credents to build it (email= julioiglesias@itis.simplelogin.com / pass = julioiglesias@itis.simplelogin.com)
 
 ## Architecture Decisions
-- Switched away from Expo/cloud build path and delivered a normal native Android app.
-- Rebuilt the Android module as a pure Kotlin + XML Android application.
-- Reused the existing project visual asset (`app-image.png`) as the full-screen app content.
-- Added ARM-compatible local Android build workarounds so the APK can be generated in this environment.
+- Delivered a normal native Android app instead of relying on Expo for the final APK.
+- Rebuilt the Android module as a pure Kotlin + XML application.
+- Branded the app as **Wave** with a dark sleek visual style.
+- Used the user-provided DJ logo as the in-app mark and launcher icon source.
+- Added an ARM-compatible local Android build workaround so APK generation succeeds in this environment.
+- Copied the verified APK to `/app/releases/Wave.apk` so it can be included in the repository.
 
 ## What's Implemented
-- Native Android Gradle project configuration (no Expo runtime dependency for the APK build).
-- Simple full-screen Android activity rendering the existing project image.
-- Local ARM-compatible AAPT2 wrapper for successful APK packaging.
-- Verified release APK build output at `/app/frontend/android/app/build/outputs/apk/release/app-release.apk`.
-- Verified package metadata: `com.anonymous.frontend`, version `1.0.0`, minSdk `24`, targetSdk `35`.
+- Native Android package renamed to `com.wave.app`.
+- App name updated to `Wave`.
+- Branded dark home screen with logo, title, tagline, and cleaner layout.
+- Generated launcher icons and splash/logo assets from the uploaded image.
+- Built and verified working release APK at `/app/releases/Wave.apk`.
+- Verified APK metadata: package `com.wave.app`, app label `Wave`, minSdk `24`, targetSdk `35`.
 
 ## Prioritized Backlog
 ### P0
-- Replace placeholder app name `frontend` with final product name.
-- Replace default package ID with your real Android application ID.
-- Replace current launcher icons with final brand assets.
+- Replace temporary debug signing with production keystore signing.
+- Confirm final Play Store-ready package ID if different from `com.wave.app`.
+- Add real app functionality beyond the branded launch screen.
 
 ### P1
-- Add a proper native splash screen.
-- Add a polished home screen instead of only the current image.
-- Sign with a production keystore for store-ready distribution.
+- Add a proper native splash transition and onboarding flow.
+- Add music/DJ-specific home features, navigation, and content screens.
+- Replace temporary tagline/caption with final product copy.
 
 ### P2
-- Add onboarding or menu navigation.
-- Add settings/about screen.
-- Add analytics or crash reporting if needed later.
+- Add settings, sharing, analytics, and crash reporting.
+- Add theme toggles or richer motion polish.
 
 ## Next Tasks
-- Decide the final app name and package name.
-- Provide final icon/splash assets if you want branded output.
-- If you want, convert more of the original experience into native screens next.
+- Push the repository state containing `/app/releases/Wave.apk` to GitHub.
+- Decide whether to keep `com.wave.app` or replace it with a final production package name.
+- Expand the branded Android shell into the full Wave app experience.

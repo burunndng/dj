@@ -1,4 +1,4 @@
-package com.anonymous.frontend
+package com.wave.app
 
 import android.app.Application
 
